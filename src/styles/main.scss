@@ -1,0 +1,33 @@
+@import '../modules/layout/layout';
+
+.input {
+  position: relative;
+  width: 250px;
+
+  &::before {
+    content: "";
+    border-width: 4px 4px 0px;
+    border-style: solid;
+    border-color: rgb(170, 170, 170) transparent transparent;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &__field {
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    -webkit-appearance: none;
+    height: 30px;
+  }
+}
