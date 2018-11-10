@@ -1,0 +1,17 @@
+mixin combobox
+	form.combobox#combobox(data-type="1")
+		input.combobox__field(type="text" placeholder="Введите или выберите из списка")
+		.combobox__error
+		.combobox__warning
+		.combobox__hint-container.combobox__hint-container_gray
+			.combobox__hint Выберите значение из списка
+		.combobox__dropdown
+			.combobox__notification-container
+				.combobox__notification Что-то пошло не так. Проверьте соединение с интернетом и попробуйте еще раз
+				a.combobox__upgrade(href="./") Обновить
+			ul.combobox__list
+		
+		//- .icons
+		//-   +icon('52', 'icon-52')
+		//-   +icon('73', 'icon-73')
+		//-   +icon('25', 'icon-25')

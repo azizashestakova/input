@@ -68,6 +68,10 @@
       "development": "tmp",
       "production": "build",
       "tasks": {
+        "data": [
+          "data",
+          "data"
+        ],
         "html": [
           "pages",
           ""
@@ -99,6 +103,7 @@
       }
     },
     "tasks": [
+      "copy",
       "html",
       "css",
       "js",

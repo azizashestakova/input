@@ -2,30 +2,4 @@ extends ../modules/layout/layout.pug
 
 block page
   main.main
-    .input
-      input.input__field(type="text" placeholder="Введите или выберите из списка")
-      .error
-      .warning
-      .hint-container.hint-container_gray
-        .hint Выберите значение из списка
-    .list-container
-      ul.list
-        li.list__item Абакан
-        li.list__item Алексин
-        li.list__item Алматы
-        li.list__item Альметьевск
-        li.list__item Алтайский край
-        li.list__item Амурская область
-        li.list__item Анадырь
-        li.list__item Анапа
-        li.list__item Архангельск
-        li.list__item Архангельская область
-        li.list__item Астраханская область
-        li.list__item Астрахань
-    .notification-container
-      .notification Что-то пошло не так. Проверьте соединение с интернетом и попробуйте еще раз
-      a(href="./").upgrade Обновить
-    .icons
-      +icon('52', 'icon-52')
-      +icon('73', 'icon-73')
-      +icon('25', 'icon-25')
+    +combobox

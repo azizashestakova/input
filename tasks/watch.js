@@ -3,6 +3,7 @@
 module.exports = params => {
   let { gulp, source, dirs } = params;
   gulp.task('watch', () => {    
+    gulp.watch(source + '/**/*.json', gulp.series('copy'));
     gulp.watch(`${source}/**/*.pug`, gulp.series('html'));
     gulp.watch(`${source}/**/*.{sass,scss}`, gulp.series('css'));
     gulp.watch(`${source}/**/*.js`, gulp.series('js'));
