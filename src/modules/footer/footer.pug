@@ -1,2 +1,21 @@
 mixin footer
-  footer.footer Footer
+  footer.footer-contacts
+    .container
+      .row
+        .col-12.col-md-6
+          form.footer-contacts__form(action="")
+            h2.footer-contacts__title Contact us
+            input.footer-contacts__field(type="email" placeholder="Email...")
+            input.footer-contacts__field(type="text" placeholder="Subject...")
+            textarea.footer-contacts__message(placeholder="Message...")
+            button.footer-contacts__button.button.button_orange Send message
+        .col-12.col-md-6
+          h2.footer-contacts__title Follow us
+          ul.footer-contacts__social
+            li.footer-contacts__social-item: a.footer-contacts__social-link(href="./" target="_blank")
+            li.footer-contacts__social-item: a.footer-contacts__social-link(href="./" target="_blank")
+            li.footer-contacts__social-item: a.footer-contacts__social-link(href="./" target="_blank")
+            li.footer-contacts__social-item: a.footer-contacts__social-link(href="./" target="_blank")
+            li.footer-contacts__social-item: a.footer-contacts__social-link(href="./" target="_blank")
+          p.footer-contacts__copyright © Maren One Page Bootstrap Template #[br] Download it for free on #[a(href="./") AZMIND]
+    .footer-contacts__top

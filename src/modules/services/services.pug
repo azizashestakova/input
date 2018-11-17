@@ -1,0 +1,11 @@
+mixin services(params)
+  .services
+    .container
+      h2.services__title Our services
+      .row
+        if params.data
+          each service in params.data
+            .col-12(class=`${params && params.col === 2 ? 'col-md-6' : 'col-md-4'}`)
+              .services__icon
+              h3.services__name= service[0]
+              p.services__description= service[1]
