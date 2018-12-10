@@ -1,0 +1,11 @@
+.button {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $color-white;
+  border-radius: 40px;
+  background-image: linear-gradient(to bottom,  #ffb24b 0%,#ff8a38 100%);
+
+  &:hover {
+    color: $color-white-opacity6;
+  }
+}
