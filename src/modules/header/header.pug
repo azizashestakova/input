@@ -2,15 +2,15 @@ mixin header
   header.header
     .header__container.container
       ul.header__nav
-        li.header__nav-item: a.header__nav-link(href="./") Top
-        li.header__nav-item: a.header__nav-link(href="./") Services
-        li.header__nav-item: a.header__nav-link(href="./") Work
-        li.header__nav-item: a.header__nav-link(href="./") Clints
-        li.header__nav-item: a.header__nav-link(href="./") Blog
-        li.header__nav-item: a.header__nav-link(href="./") Contact
+        li.header__nav-item: a.header__nav-link(href="./" title="Top") Top
+        li.header__nav-item: a.header__nav-link(href="./" title="Services") Services
+        li.header__nav-item: a.header__nav-link(href="./" title="Work") Work
+        li.header__nav-item: a.header__nav-link(href="./" title="Clients") Clients
+        li.header__nav-item: a.header__nav-link(href="./" title="Blog") Blog
+        li.header__nav-item: a.header__nav-link(href="./" title="Contact") Contact
       ul.header__social
-        li.header__social-item: a.header__social-link(href="./" target="_blank")
-        li.header__social-item: a.header__social-link(href="./" target="_blank")
-        li.header__social-item: a.header__social-link(href="./" target="_blank")
-        li.header__social-item: a.header__social-link(href="./" target="_blank")
-        li.header__social-item: a.header__social-link(href="./" target="_blank")
+        li.header__social-item: a.header__social-link(href="./" target="_blank" title="Facebook"): +icon('facebook', 'header__social-icon')
+        li.header__social-item: a.header__social-link(href="./" target="_blank" title="Dribbble"): +icon('dribbble', 'header__social-icon')
+        li.header__social-item: a.header__social-link(href="./" target="_blank" title="Twitter"): +icon('twitter', 'header__social-icon')
+        li.header__social-item: a.header__social-link(href="./" target="_blank" title="Instagram"): +icon('instagram', 'header__social-icon')
+        li.header__social-item: a.header__social-link(href="./" target="_blank" title="Pinterest"): +icon('pinterest', 'header__social-icon')

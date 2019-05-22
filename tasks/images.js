@@ -1,32 +1,38 @@
 'use strict';
 
-const imagemin        = require('gulp-imagemin');
-const pngquant        = require('imagemin-pngquant');
-const rename          = require('gulp-rename');
+const imagemin                  = require('gulp-imagemin');
+const rename                    = require('gulp-rename');
 
 module.exports = params => {
-  let { gulp, production, source, target, dirs, gulpif, browserSync } = params;
-  let input1 = [
-    `${source}/${dirs.images[0]}/**/*.svg`,
+  const { gulp, production, source, target, dirs, gulpif, browserSync } = params;
+  const input = [
+    `${source}/${dirs.images[0]}/**/*.{jpg,gif,png,webp,svg,mp4}`,
     `!${source}/${dirs.sprite[0]}/*.svg`
   ];
-  let input2 = `${source}/${dirs.images[0]}/**/*.{jpg,jpeg,gif,png,mp4}`;
-  let output = `${target}/${dirs.images[1]}`;
-  gulp.task('images', () => new Promise((resolve, reject) => {
-    let imagesCopy = () => gulp.src(input1).pipe(rename(path => path.dirname = '/'))
-      .pipe(gulp.dest(output));
-    let imagesMin = () => gulp.src(input2)
-      .pipe(gulpif(production, imagemin({
+  const output = `${target}/${dirs.images[1]}`;
+  gulp.task('images', () => gulp.src(input)
+    .pipe(rename(path => {
+      path.dirname = '/';
+    }))
+    .pipe(gulpif(production, imagemin([
+      imagemin.jpegtran({
         progressive: true,
-        use: [pngquant()]
-      })))
-      .pipe(rename(path => path.dirname = '/'))
-      .pipe(gulp.dest(output));
-    let imagesDone = done => {
-      browserSync.reload();
-      resolve();
-      done();
-    };
-    gulp.series(gulp.parallel(imagesCopy, imagesMin), imagesDone)();
-  }));
+        quality: 80
+      }),
+      imagemin.gifsicle({
+        interlaced: false
+      }),
+      imagemin.optipng({
+        optimizationLevel: 4
+      }),
+      imagemin.svgo({
+        plugins: [
+          { removeViewBox: false },
+          { convertColors: { shorthex: true } },
+          { removeEmptyAttrs: false }
+        ]
+      })
+    ])))
+    .pipe(gulp.dest(output))
+    .on('end', () => browserSync.reload()));
 };

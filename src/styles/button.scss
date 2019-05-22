@@ -3,9 +3,54 @@
   text-transform: uppercase;
   color: $color-white;
   border-radius: 40px;
-  background-image: linear-gradient(to bottom,  #ffb24b 0%,#ff8a38 100%);
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+  border: 0;
+  padding: 9px 40px;
+  transition: all .3s;
+  cursor: pointer;
+  height: 50px;
+  vertical-align: middle;
 
   &:hover {
-    color: $color-white-opacity6;
+    // opacity: .9;
+    color: $color-white;
+  }
+}
+
+.button_orange {
+  // background-color: $color-mango-tango;
+  // background-image: linear-gradient(to bottom, $color-yellow-orange 0%, $color-mango-tango 100%);
+  position: relative;
+  z-index: 0;
+  background-image: linear-gradient(to bottom, $color-yellow-orange 0%, $color-mango-tango 100%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, $color-mango-tango 0%, $color-yellow-orange 100%);
+    opacity: 0;
+    border-radius: 40px;
+    transition: opacity .3s;
+    z-index: -1;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.button_dark {
+  background-color: rgba($color-black, .3);
+
+  &:hover {
+    background-color: rgba($color-black, .4);
   }
 }
