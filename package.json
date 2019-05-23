@@ -134,6 +134,7 @@
     ]
   },
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
     "bootstrap": "^4.1.3"
   }
 }

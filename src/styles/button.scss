@@ -14,14 +14,11 @@
   vertical-align: middle;
 
   &:hover {
-    // opacity: .9;
     color: $color-white;
   }
 }
 
 .button_orange {
-  // background-color: $color-mango-tango;
-  // background-image: linear-gradient(to bottom, $color-yellow-orange 0%, $color-mango-tango 100%);
   position: relative;
   z-index: 0;
   background-image: linear-gradient(to bottom, $color-yellow-orange 0%, $color-mango-tango 100%);
@@ -33,7 +30,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, $color-mango-tango 0%, $color-yellow-orange 100%);
+    background-image: linear-gradient(to bottom, $color-mango-tango 0%, $color-mango-tango 100%);
     opacity: 0;
     border-radius: 40px;
     transition: opacity .3s;
