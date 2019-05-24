@@ -1,21 +1,21 @@
 mixin footer
-  footer.footer-contacts
+  footer.footer
     .container
       .row
         .col-12.col-md-6
-          form.footer-contacts__form(action="")
-            h2.footer-contacts__title Contact us
-            input.footer-contacts__field(type="email" placeholder="Email...")
-            input.footer-contacts__field(type="text" placeholder="Subject...")
-            textarea.footer-contacts__message(placeholder="Message...")
-            button.footer-contacts__button.button.button_orange Send message
+          form.footer__form(action="")
+            h2.footer__title Contact us
+            input.footer__field(type="email" placeholder="Email...")
+            input.footer__field(type="text" placeholder="Subject...")
+            textarea.footer__message(placeholder="Message...")
+            button.footer__button.button.button_orange Send message
         .col-12.col-md-6
-          h2.footer-contacts__title Follow us
-          ul.footer-contacts__social
-            li.footer-contacts__social-item: a.footer-contacts__social-link(href="./" target="_blank")
-            li.footer-contacts__social-item: a.footer-contacts__social-link(href="./" target="_blank")
-            li.footer-contacts__social-item: a.footer-contacts__social-link(href="./" target="_blank")
-            li.footer-contacts__social-item: a.footer-contacts__social-link(href="./" target="_blank")
-            li.footer-contacts__social-item: a.footer-contacts__social-link(href="./" target="_blank")
-          p.footer-contacts__copyright © Maren One Page Bootstrap Template #[br] Download it for free on #[a(href="./") AZMIND]
-    .footer-contacts__top
+          h2.footer__title Follow us
+          ul.footer__social
+            li.footer__social-item: a.footer__social-link.footer__social-link_facebook(href="./" target="_blank" title="Facebook"): +icon('facebook', 'footer__social-icon')
+            li.footer__social-item: a.footer__social-link.footer__social-link_dribbble(href="./" target="_blank" title="Dribbble"): +icon('dribbble', 'footer__social-icon')
+            li.footer__social-item: a.footer__social-link.footer__social-link_twitter(href="./" target="_blank" title="Twitter"): +icon('twitter', 'footer__social-icon')
+            li.footer__social-item: a.footer__social-link.footer__social-link_instagram(href="./" target="_blank" title="Instagram"): +icon('instagram', 'footer__social-icon')
+            li.footer__social-item: a.footer__social-link.footer__social-link_pinterest(href="./" target="_blank" title="Pinterest"): +icon('pinterest', 'footer__social-icon')
+          p.footer__copyright © Maren One Page Bootstrap Template #[br] Download it for free on #[a(href="./") AZMIND]
+    .footer__top

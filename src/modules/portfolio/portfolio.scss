@@ -1,3 +1,33 @@
 .portfolio {
 
 }
+
+.portfolio__title {
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+}
+
+.portfolio__link {
+  display: block;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 300;
+  font-style: italic;
+  color: $color-canvas-gray;
+}
+
+.portfolio__image-container {
+  overflow: hidden;
+}
+
+.portfolio__image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform .8s;
+
+  &:hover {
+    transform: scale(1.25);
+  }
+}

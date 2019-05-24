@@ -11,21 +11,21 @@ include ../modules/preview/preview.pug
 block page
   -
     var data1 = [
-      ['Branding', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.'],
-      ['Web design', ' Ut wisi enim ad minim veniam, quis nostrud. Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'],
-      ['Social media', 'Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat']
+      ['magic', 'Branding', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.'],
+      ['wheel', 'Web design', ' Ut wisi enim ad minim veniam, quis nostrud. Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'],
+      ['twitter', 'Social media', 'Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat']
     ];
     var data2 = [
-      ['Branding', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.'],
-      ['Web design', ' Ut wisi enim ad minim veniam, quis nostrud. Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'],
-      ['Social media', 'Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat'],
-      ['Branding', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.']
+      ['', 'Branding', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.'],
+      ['pencil', 'Web design', ' Ut wisi enim ad minim veniam, quis nostrud. Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.'],
+      ['cloud', 'Social media', 'Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat'],
+      ['', 'Branding', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.']
     ];
   main.main
     +preview
-    +services({ cols: 3, data: data1 })
+    +services({ col: 3, data: data1 })
     +support  
-    +services({ cols: 2, data: data2 })
+    +services({ col: 2, data: data2 })
     +download
     +portfolio
     +review
