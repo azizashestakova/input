@@ -1,3 +1,50 @@
 .review {
+  width: 100%;
+  overflow: hidden;
+}
 
+.review__slider {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 400%;
+}
+
+.review__slide {
+  flex-shrink: 0;
+  width: 25%;
+}
+
+.review__dots {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.review__dot {
+  list-style-type: none;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.review__dot-button {
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 50%;
+  appearance: none;
+  padding: 0;
+  display: block;
+  border: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &_active {
+    background-color: green;
+  }
 }

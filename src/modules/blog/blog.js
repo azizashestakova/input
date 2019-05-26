@@ -1,5 +1,3 @@
-import '@babel/polyfill';
-
 'use strict';
 
 export default class Blog {
