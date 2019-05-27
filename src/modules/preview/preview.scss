@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../images/preview-bg.jpg");
+  background-image: url("../images/shoes-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -17,18 +17,46 @@
   width: 100%;
 }
 
+.preview__logo {
+  display: block;
+  margin: auto;
+}
+
 .preview__title {
   text-align: center;
   color: $color-white;
   font-weight: 300;
   font-style: italic;
+  margin-top: 45px;
+  margin-bottom: 0;
 }
 
 .preview__description {
   text-align: center;
   color: $color-white-opacity8;
+  margin-bottom: 0;
 }
 
 .preview__buttons {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+
+  @include media-breakpoint-down(xs) {
+    flex-direction: column;
+  }
+}
+
+.preview__button {
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
 }

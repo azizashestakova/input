@@ -1,14 +1,83 @@
 .services {
-
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 .services__title {
   font-weight: 300;
   font-style: italic;
   text-align: center;
+  position: relative;
+  padding-bottom: 25px;
+  margin-bottom: 40px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    border-top: 1px dotted $color-white-aluminum;
+  }
+}
+
+.services__wrapper {
+  display: flex;
+  margin-bottom: 40px;
+
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+  }
+}
+
+.services__wrapper-icon {
+  width: 80px;
+  height: 80px;
+  background: $color-mango-tango;
+  background: linear-gradient(to bottom, $color-yellow-orange 0%, $color-mango-tango 100%);
+  text-align: center;
+  border-radius: 50%;
+  transition: all .6s;
+  fill: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 35px;
+
+  @include media-breakpoint-down(sm) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.services__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.services__text {
+
+  @include media-breakpoint-down(lg) {
+    margin-top: 30px;
+  }
 }
 
 .services__name {
   font-weight: 300;
   font-style: italic;
+  margin-bottom: 0;
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+}
+
+.services__description {
+  color: $color-pearl-dark-gray;
+  margin-bottom: 0;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 15px;
+    text-align: center;
+  }
 }

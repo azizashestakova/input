@@ -1,32 +1,36 @@
 mixin review
   .review
-    ul.review__dots
-      li.review__dot: button.review__dot-button(type="button" data-index="0")
-      li.review__dot: button.review__dot-button(type="button" data-index="1")
-      li.review__dot: button.review__dot-button(type="button" data-index="2")
-      li.review__dot: button.review__dot-button(type="button" data-index="3")
     .review__slider
       .review__slide
         .container
-          img.review__slide-image(src="" alt="")
+          .review__slide-wrapper-image
+            img.review__slide-image.image-cover(src="./images/phone.jpg" alt="Phone")
           blockquote.review__slide-quote "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat..."
             cite.review__slide-cite
               a.review__slide-link(href="./") Minim Veniam, nostrud.com
       .review__slide
         .container
-          img.review__slide-image(src="" alt="")
+          .review__slide-wrapper-image
+            img.review__slide-image.image-cover(src="./images/keyboard.jpg" alt="Keyboard")
           blockquote.review__slide-quote "2Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat..."
             cite.review__slide-cite
               a.review__slide-link(href="./") Minim Veniam, nostrud.com
       .review__slide
         .container
-          img.review__slide-image(src="" alt="")
+          .review__slide-wrapper-image
+            img.review__slide-image.image-cover(src="./images/laptop.jpg" alt="Laptop")
           blockquote.review__slide-quote "3Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat..."
             cite.review__slide-cite
               a.review__slide-link(href="./") Minim Veniam, nostrud.com
       .review__slide
         .container
-          img.review__slide-image(src="" alt="")
+          .review__slide-wrapper-image
+            img.review__slide-image.image-cover(src="./images/athlete.jpg" alt="Athlete")
           blockquote.review__slide-quote "4Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat..."
             cite.review__slide-cite
               a.review__slide-link(href="./") Minim Veniam, nostrud.com
+    ul.review__dots
+      li.review__dot: button.review__dot-button(type="button" data-index="0")
+      li.review__dot: button.review__dot-button(type="button" data-index="1")
+      li.review__dot: button.review__dot-button(type="button" data-index="2")
+      li.review__dot: button.review__dot-button(type="button" data-index="3")

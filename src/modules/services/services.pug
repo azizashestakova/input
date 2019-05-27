@@ -6,6 +6,9 @@ mixin services(params)
         if params.data
           each service in params.data
             .col-12(class=`${params && params.col === 2 ? 'col-md-6' : 'col-md-4'}`)
-              +icon(service[0], 'services__icon')
-              h3.services__name= service[1]
-              p.services__description= service[2]
+              .services__wrapper
+                .services__wrapper-icon
+                  +icon(service[0], 'services__icon')
+                .services__text
+                  h3.services__name= service[1]
+                  p.services__description= service[2]

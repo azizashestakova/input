@@ -1,3 +1,25 @@
 .download {
+  background-color: $color-canvas-gray;
+  background-image: url("../images/shoes-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 
+.download__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.download__description {
+  color: rgba($color-white, .8);
+  text-align: center;
+}
+
+.download__button {
+  margin-top: 60px;
 }

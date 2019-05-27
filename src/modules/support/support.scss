@@ -1,5 +1,6 @@
 .support {
-
+  background-color: $color-light-gray;
+  padding-top: 100px;
 }
 
 .support__title {
@@ -7,4 +8,31 @@
   line-height: 30px;
   font-weight: 300;
   font-style: italic;
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+}
+
+.support__description {
+  margin-top: 15px;
+  color: $color-pearl-dark-gray;
+
+  @include media-breakpoint-down(md) {
+    text-align: center;
+  }
+}
+
+.support__wrapper-img {
+  overflow: hidden;
+  height: 465px;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 70px;
+  }
+}
+
+.support__img {
+  display: block;
+  margin: auto;
 }
