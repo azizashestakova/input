@@ -134,4 +134,12 @@
 .footer__top {
   height: 80px;
   background-color: $color-black-brown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__arrow {
+  width: 30px;
+  height: 30px;
 }
